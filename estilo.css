@@ -14,7 +14,7 @@ body {
 .box {
     margin: 20px auto;
     padding: 20px;
-    max-width:;
+    max-width:900px;
     border: 1px solid salmon;
     border-radius: 10px;
     background-color: white;
