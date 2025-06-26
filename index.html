@@ -5,52 +5,48 @@
   <title>Receta de panqueques</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilos.css">
+</head>
 <body>
-  <div class="contenedor">
+  <div class="box header">
+    <h1>Receta de panqueques</h1>
+    <nav class="nav">
+      <a href="#ingredientes">Ingredientes</a>
+      <a href="#preparacion">Preparación</a>
+    </nav>
+  </div>
 
-    <!-- Encabezado -->
-    <div class="box header">
-      <h1>Receta de panqueques</h1>
-      <div class="nav">
-        <a href="#ingredientes">Ingredientes</a>
-        <a href="#preparacion">Preparación</a>
-      </div>
-    </div>
+  <img src="img/panqueques.jpg" alt="Logo de panqueques" class="Logo">
 
-    <div class="box imagen">
-      <img src="panqueques.jpg" alt="Logo de panqueques" class="logo">
-    </div>
-    <div class="box ingredientes" id="ingredientes">
-      <div>
-        <h2>Ingredientes</h2>
-        <label for="personas">¿Para cuántas personas son?</label>
-        <select id="personas" onchange="ajustarIngredientes()">
-          <option value="2">2 personas</option>
-          <option value="4">4 personas</option>
-          <option value="6">6 personas</option>
-        </select>
-      </div>
+  <div class="box video-container">
+    <h2>Video de preparación</h2>
+    <video controls>
+      <source src="video/panqueques-caseros.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+  </div>
 
-      <div>
-        <ul id="lista_ingredientes" class="lista_ingredientes">
-        </ul>
-      </div>
-    </div>
+  <div class="box" id="ingredientes">
+    <h2>Ingredientes</h2>
+    <label for="personas">¿Para cuántas personas?</label>
+    <select id="personas" onchange="ajustarIngredientes()">
+      <option value="2">2 personas</option>
+      <option value="4">4 personas</option>
+      <option value="6">6 personas</option>
+    </select>
+    <ul id="lista_ingredientes" class="lista_ingredientes"></ul>
+  </div>
 
-    <div class="box preparacion" id="preparacion">
-      <div>
-        <h2>Preparación</h2>
-        <ol>
-          <li>Mezclar todos los ingredientes en un bowl.</li>
-          <li>Calentar el sartén con un poco de aceite.</li>
-          <li>Verter una porción de la mezcla y cocinar hasta dorar.</li>
-          <li>Dar la vuelta y cocinar el otro lado.</li>
-          <li>Repetir hasta terminar la mezcla.</li>
-        </ol>
-      </div>
-      <div>
-        <img src="panqueques1.jpg" alt="Preparación panqueques" style="width:100%; border-radius: 10px;">
-      </div>
+  <div class="box" id="preparacion">
+    <h2>Preparación</h2>
+    <div class="Preparacion_contenido">
+      <ol>
+        <li>Mezclar todos los ingredientes en un bowl.</li>
+        <li>Calentar el sartén con un poco de aceite.</li>
+        <li>Verter una porción y cocinar hasta dorar.</li>
+        <li>Dar la vuelta y cocinar el otro lado.</li>
+        <li>Repetir hasta terminar la mezcla.</li>
+      </ol>
+      <img src="img/Panqueques1.jpg" alt="Preparación panqueques" class="img-preparacion">
     </div>
   </div>
 
@@ -78,3 +74,4 @@
   </script>
 </body>
 </html>
+
