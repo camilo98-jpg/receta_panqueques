@@ -26,7 +26,7 @@
             <option value="6">Para 6 personas</option>
         </select>
         <ul id="lista_ingredientes" class="lista_ingredientes">
-            <!-- Ingredientes aparecerán aquí -->
+            
         </ul>
     </section>
 
@@ -48,11 +48,11 @@
         function ajustarIngredientes() {
             const personas = parseInt(document.getElementById("personas").value);
             const base = {
-                harina: 0.5,  // tazas
-                leche: 0.5,   // tazas
-                huevos: 1,    // unidades
-                aceite: 0.5,  // cucharadas
-                sal: 0.25     // cucharaditas
+                harina: 0.5,  
+                leche: 0.5,   
+                huevos: 1,    
+                aceite: 0.5,  
+                sal: 0.25     
             };
 
             document.getElementById("lista_ingredientes").innerHTML = `
@@ -64,7 +64,7 @@
             `;
         }
 
-        // Mostrar los ingredientes al cargar la página
+    
         window.onload = ajustarIngredientes;
     </script>
 </body>
