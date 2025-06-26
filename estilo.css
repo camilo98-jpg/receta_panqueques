@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(197, 230, 233);
+    padding: 30px;
+    color: rgb(0, 5, 10);
+}
+
+.box {
+    margin: 20px auto;
+    padding: 20px;
+    max-width:;
+    border: 1px solid salmon;
+    border-radius: 10px;
+    background-color: white;
+}
+
+header {
+    background-color: #f2c94c;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: #4e342e;
+    flex: 1;
+    text-align: left;
+}
+
+.nav {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #2e4e31;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.Logo {
+    display: block;
+    margin: 20px auto;
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+img {
+    display: block;
+    max-width: 90%;
+    margin: 30px auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.Logo:hover,
+img:hover {
+    transform: scale(1.05);
+}
+
+.lista_ingredientes {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.lista_ingredientes li {
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.Preparacion_contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.img-preparacion {
+    max-width: 90%;
+    height: auto;
+}
+
+ol {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .Preparacion_contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    header {
+        flex-direction: column;
+        align-items:center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        margin: 5px 0;
+    }
+
+    .Logo {
+        width: 80%;
+    }
+
+    img {
+        width: 90%;
+    }
+}
+ 
