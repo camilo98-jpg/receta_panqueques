@@ -76,7 +76,7 @@ section {
 
 img {
     display: block;
-    max-width: 100%;
+    max-width: 90%;
     margin: 30px auto;
     border-radius: 20px;
     transition: transform 0.3s ease;
