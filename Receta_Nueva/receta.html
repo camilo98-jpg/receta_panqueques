@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Receta de panqueques</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="box header">
+        <h1>Receta de panqueques</h1>
+        <nav class="nav">
+            <a href="#Ingredientes">Ingredientes</a>
+            <a href="#Preparacion">Preparación</a>
+        </nav>
+    </header>
+
+    <img src="panqueques.jpg" alt="Logo" class="Logo" title="Logo de panqueques">
+
+    <section id="Ingredientes">
+        <h2>Ingredientes</h2>
+        <label for="personas">¿Para cuántas personas son?</label>
+        <select id="personas" onchange="ajustarIngredientes()">
+            <option value="2">Para 2 personas</option>
+            <option value="4">Para 4 personas</option>
+            <option value="6">Para 6 personas</option>
+        </select>
+        <ul id="lista_ingredientes" class="lista_ingredientes">
+            <!-- Ingredientes aparecerán aquí -->
+        </ul>
+    </section>
+
+    <section id="Preparacion">
+        <h2>Preparación</h2>
+        <div class="Preparacion_contenido">
+            <ol>
+                <li>Mezclar todos los ingredientes en un bowl</li>
+                <li>Calentar el sartén con un poco de aceite</li>
+                <li>Verter una porción de la mezcla y cocinar hasta dorar</li>
+                <li>Dar la vuelta y cocinar el otro lado</li>
+                <li>Repetir hasta terminar la mezcla</li>
+            </ol>
+            <img src="Panqueques1.jpg" alt="Preparacion panqueques" class="img-preparacion" title="Preparando panqueques" width="200">
+        </div>
+    </section>
+
+    <script>
+        function ajustarIngredientes() {
+            const personas = parseInt(document.getElementById("personas").value);
+            const base = {
+                harina: 0.5,  // tazas
+                leche: 0.5,   // tazas
+                huevos: 1,    // unidades
+                aceite: 0.5,  // cucharadas
+                sal: 0.25     // cucharaditas
+            };
+
+            document.getElementById("lista_ingredientes").innerHTML = `
+                <li>${base.harina * personas} taza(s) de harina</li>
+                <li>${base.leche * personas} taza(s) de leche</li>
+                <li>${base.huevos * personas} huevo(s)</li>
+                <li>${base.aceite * personas} cucharada(s) de aceite</li>
+                <li>${base.sal * personas} cucharadita(s) de sal</li>
+            `;
+        }
+
+        // Mostrar los ingredientes al cargar la página
+        window.onload = ajustarIngredientes;
+    </script>
+</body>
+</html>
